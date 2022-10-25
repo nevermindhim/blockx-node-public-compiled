@@ -15,7 +15,6 @@ go version
 ```
 // Should return go version go1.18 linux/amd64
 
-
 # how to become a validator - Linux
 1. Download blockxd binary file and genesis file.
 2. run the following command
@@ -26,11 +25,10 @@ go version
     $ blockxd config keyring-backend file
     $ echo "seed words from your account" | blockxd keys add validator --keyring-backend file --recover
     $ cp ./genesis.json ~/.blockxd/config/genesis.json
-3. Get BCX.
-4. open config.toml file and set the seeds.
+3. open config.toml file and set the seeds.
     $ vim ~/.blockxd/config/config.toml
     Find seeds = "" line and modify as seeds = "seed-id@seed-rpc"
-5. run the node
+4. run the node
     $ blockxd start --minimum-gas-prices 1000000000abcx
-6. run the following command
+5. run the following command
     blockxd tx staking create-validator --amount=100000000000000000000000abcx --pubkey=$(blockxd tendermint show-validator) --moniker=< your node name> --chain-id=blockx_12345-1 --commission-rate="0.05" --commission-max-rate="0.10" --commission-max-change-rate="0.01" --min-self-delegation="1000000" --gas="300000" --gas-prices="1000000000abcx" --from=<your key> --keyring-backend file

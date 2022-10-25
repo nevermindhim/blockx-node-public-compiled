@@ -24,7 +24,7 @@ go version
     $ blockxd init <validator-name> --chain-id blockx_12345-1 --keyring-backend file
     $ blockxd config chain-id blockx_12345-1
     $ blockxd config keyring-backend file
-    $ blockxd keys add <your key name> --keyring-backend file
+    $ echo "seed words from your account" | blockxd keys add validator --keyring-backend file --recover
     $ cp ./genesis.json ~/.blockxd/config/genesis.json
 3. Get BCX.
 4. open config.toml file and set the seeds.

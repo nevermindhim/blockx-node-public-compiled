@@ -11,7 +11,7 @@ cp genesis.json $HOME/.blockxd/config
 cp blockxd.service /etc/systemd/system
 cd $HOME/.blockxd/config
 
-# for seed nodes, run following.
+# for seed nodes, run following. need to change persistent_peers
 # sed -i 's/seed_mode = false/seed_mode = true/g' config.toml
 # sed -i 's/persistent_peers = \"\"/persistent_peers = \"8339668165d1fe98f24c042e7a61fd7c6aa7a1aa@142.93.202.64:26656\"/g' config.toml
 

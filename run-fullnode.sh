@@ -1,7 +1,7 @@
 rm -rf $HOME/.blockxd
+rm $HOME/go/bin/blockxd
 
-RUN_PATH = "/usr/local/sbin/" 
-mv ./blockxd $RUN_PATH
+cp blockxd $HOME/go/bin
 
 blockxd config chain-id blockx_12345-1
 blockxd config keyring-backend file

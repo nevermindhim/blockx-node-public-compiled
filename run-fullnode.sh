@@ -20,4 +20,3 @@ sed -i 's/seeds = \"\"/seeds = \"8339668165d1fe98f24c042e7a61fd7c6aa7a1aa@142.93
 
 systemctl daemon-reload
 systemctl start blockxd.service
-service blockxd start

@@ -1,0 +1,13 @@
+[Unit]
+Description=Blockxd node
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/root/go/bin/blockxd start
+Restart=always
+RestartSec=1
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

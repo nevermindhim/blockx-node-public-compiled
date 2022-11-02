@@ -49,7 +49,7 @@ blockxd keys add <your key name> --keyring-backend file --algo eth_secp256k1
 
 # how to become a validator (self-delegate)
 ```
-blockxd tx staking create-validator   --amount=<amount>bcx   --pubkey=$(blockxd tendermint show-validator)   --moniker=<your moniker>   --chain-id=blockx_12345-1   --commission-rate=<commission rate>   --commission-max-rate=<commission max rate>   --commission-max-change-rate=<commission max change rate>   --min-self-delegation=<min self delegation>  --gas auto --from=<your key> --keyring-backend file
+blockxd tx staking create-validator   --amount=<amount>abcx   --pubkey=$(blockxd tendermint show-validator)   --moniker=<your moniker>   --chain-id=blockx_12345-1   --commission-rate=<commission rate>   --commission-max-rate=<commission max rate>   --commission-max-change-rate=<commission max change rate>   --min-self-delegation=<min self delegation>  --gas auto --from=<your key> --keyring-backend file
 
 # e.g. blockxd tx staking create-validator   --amount=50000000000000000000000000abcx   --pubkey=$(blockxd tendermint show-validator)   --moniker="seednode-3"   --chain-id=blockx_12345-1   --commission-rate="0.05"   --commission-max-rate="0.10"   --commission-max-change-rate="0.01"   --min-self-delegation="1000000"  --gas auto   --from=seedkey3 --keyring-backend file
 ```

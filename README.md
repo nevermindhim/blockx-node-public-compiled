@@ -32,3 +32,11 @@ go version
     $ blockxd start --minimum-gas-prices 1000000000abcx
 5. run the following command
     blockxd tx staking create-validator --amount=100000000000000000000000abcx --pubkey=$(blockxd tendermint show-validator) --moniker=< your node name> --chain-id=blockx_12345-1 --commission-rate="0.05" --commission-max-rate="0.10" --commission-max-change-rate="0.01" --min-self-delegation="1000000" --gas="300000" --gas-prices="1000000000abcx" --from=<your key> --keyring-backend file
+
+
+# how to run a fullnode - Ubuntu 22.04
+```
+git clone https://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@github.com/defi-ventures/blockx-node-public-compiled.git
+cd blockx-node-public-compiled
+./run-fullnode.sh
+```

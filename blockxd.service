@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=blockxd start
+ExecStart=/root/go/bin/blockxd start
 Restart=always
 RestartSec=1
 LimitNOFILE=4096

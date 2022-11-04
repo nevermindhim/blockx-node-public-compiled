@@ -12,7 +12,7 @@ blockxd init seednode2 --chain-id blockx_12345-1 --keyring-backend file
 
 cp genesis.json $HOME/.blockxd/config
 
-BINARY_PATH = $(which blockxd)
+BINARY_PATH = "$(which blockxd)"
 
 sed -i "s|ExecStart=blockxd start|ExecStart=$BINARY_PATH start|g" blockxd.service
 sudo cp blockxd.service /etc/systemd/system

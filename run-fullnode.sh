@@ -12,6 +12,9 @@ blockxd init seednode2 --chain-id blockx_12345-1 --keyring-backend file
 
 cp genesis.json $HOME/.blockxd/config
 
+# BINARY_PATH="$(which blockxd)"
+
+# sed -i "s|ExecStart=blockxd start|ExecStart=$BINARY_PATH start|g" blockxd.service
 cp blockxd.service /etc/systemd/system
 cd $HOME/.blockxd/config
 
@@ -20,7 +23,7 @@ cd $HOME/.blockxd/config
 # sed -i 's/persistent_peers = \"\"/persistent_peers = \"8339668165d1fe98f24c042e7a61fd7c6aa7a1aa@142.93.202.64:26656,23b12388a6922cb3bb7b72b8b7cc7429b7444f80@142.93.3.163:26656,85f8e76274cb95d9dde3487d5b8547be27f58192@167.99.12.133:26656\"/g' config.toml
 
 # for non-seed nodes, run following.
-sed -i 's/seeds = \"\"/seeds = \"8339668165d1fe98f24c042e7a61fd7c6aa7a1aa@142.93.202.64:26656,23b12388a6922cb3bb7b72b8b7cc7429b7444f80@142.93.3.163:26656,85f8e76274cb95d9dde3487d5b8547be27f58192@167.99.12.133:26656\"/g' config.toml
+sed -i 's/seeds = \"\"/seeds = \"8807db839efe14a9cd1b5b76ee5beac4f14bd622@104.248.249.90:26656,68040a4e2a34a5cab55874fe7df0b422c0d24efd@164.92.129.182:26656\"/g' config.toml
 
 systemctl daemon-reload
 systemctl start blockxd.service

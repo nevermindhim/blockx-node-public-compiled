@@ -19,7 +19,7 @@ mv blockxd $HOME/.blockxd/cosmovisor/genesis/bin
 
 # init binary
 cd $HOME/.blockxd/cosmovisor/genesis/bin
-./blockxd config chain-id CHAINID
+./blockxd config chain-id $CHAINID
 ./blockxd config keyring-backend $KEYRING
 ./blockxd init $MONIKER
 cp genesis.json $HOME/.blockxd/config

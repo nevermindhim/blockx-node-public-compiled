@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/root/go/bin/blockxd start
+ExecStart=cosmovisor run start --home $HOME/.blockxd
 Restart=always
 RestartSec=1
 LimitNOFILE=4096

@@ -19,12 +19,6 @@ curl -LO https://github.com/defi-ventures/blockx-node-public-compiled/releases/d
 chmod +x blockxd
 mv blockxd $HOME/.blockxd/cosmovisor/genesis/bin
 
-# init binary
-cd $HOME/.blockxd/cosmovisor/genesis/bin
-./blockxd config chain-id $CHAINID
-./blockxd config keyring-backend $KEYRING
-./blockxd init $MONIKER --chain-id $CHAINID --keyring-backend $KEYRING
-
 cp genesis.json $HOME/.blockxd/config
 
 export DAEMON_NAME=blockxd         # binary name
@@ -40,6 +34,11 @@ sed -i 's/persistent_peers = \"\"/persistent_peers = \"4a7401f7d6daa39d331196d8c
 # for non-seed nodes, run following.
 # sed -i 's/seeds = \"\"/seeds = \"8807db839efe14a9cd1b5b76ee5beac4f14bd622@104.248.249.90:26656,68040a4e2a34a5cab55874fe7df0b422c0d24efd@164.92.129.182:26656\"/g' config.toml
 
+# init binary
+cd $HOME/.blockxd/cosmovisor/genesis/bin
+./blockxd config chain-id $CHAINID
+./blockxd config keyring-backend $KEYRING
+./blockxd init $MONIKER --chain-id $CHAINID --keyring-backend $KEYRING
 
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 

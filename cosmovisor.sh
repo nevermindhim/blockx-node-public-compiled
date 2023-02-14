@@ -23,7 +23,8 @@ mv blockxd $HOME/.blockxd/cosmovisor/genesis/bin
 cd $HOME/.blockxd/cosmovisor/genesis/bin
 ./blockxd config chain-id $CHAINID
 ./blockxd config keyring-backend $KEYRING
-./blockxd init $MONIKER
+./blockxd init $MONIKER --chain-id $CHAINID --keyring-backend $KEYRING
+
 cp genesis.json $HOME/.blockxd/config
 
 export DAEMON_NAME=blockxd         # binary name

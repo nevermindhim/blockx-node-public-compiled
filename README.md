@@ -58,7 +58,7 @@ It should return go version go1.18 linux/amd64
 ```
 git clone https://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@github.com/defi-ventures/blockx-node-public-compiled.git
 cd blockx-node-public-compiled
-./run-fullnode.sh
+./run-fullnode-cosmovisor.sh
 ```
 
 # How to add a key

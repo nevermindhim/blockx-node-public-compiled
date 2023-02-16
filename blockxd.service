@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/bin/bash -c 'export DAEMON_NAME=blockxd && export DAEMON_HOME=$HOME/.blockxd && cosmovisor run start --home $HOME/.blockxd'
+ExecStart=/bin/bash -c 'export DAEMON_NAME=blockxd && export DAEMON_HOME=$HOME/.blockxd && /root/go/bin/cosmovisor run start --home $HOME/.blockxd'
 Restart=always
 RestartSec=1
 LimitNOFILE=4096

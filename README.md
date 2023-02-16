@@ -56,7 +56,7 @@ It should return go version go1.18 linux/amd64
 
 # How to run a fullnode using Ubuntu 22.04
 ```
-git clone https://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@github.com/defi-ventures/blockx-node-public-compiled.git
+git clone https://github.com/defi-ventures/blockx-node-public-compiled.git
 cd blockx-node-public-compiled
 ./run-fullnode-cosmovisor.sh
 ```

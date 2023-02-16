@@ -18,6 +18,7 @@ rm -rf $HOME/.blockxd/cosmovisor
 mkdir -p $HOME/.blockxd/cosmovisor/genesis/bin
 curl -LO https://github.com/defi-ventures/blockx-node-public-compiled/releases/download/v9.0.0/blockxd
 chmod +x blockxd
+cp blockxd /root/go/bin
 mv blockxd $HOME/.blockxd/cosmovisor/genesis/bin
 
 # init binary

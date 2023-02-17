@@ -36,7 +36,7 @@ export DAEMON_HOME=$HOME/.blockxd  # daemon's home directory
 
 cd $HOME/.blockxd/config
 
-sed -i 's/persistent_peers = \"\"/persistent_peers = \"4a7401f7d6daa39d331196d8cc179a4dcb11b5f9@143.198.110.221:26656\"/g' config.toml
+sed -i 's/persistent_peers = \"\"/persistent_peers = \"4a7401f7d6daa39d331196d8cc179a4dcb11b5f9@143.198.110.221:26656,49a5a62543f5fec60db42b00d9ebe192c3185e15@143.198.97.96:26656,dccf886659c4afcb0cd4895ccd9f2804c7e7e1cd@143.198.101.61:26656\"/g' config.toml
 
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 

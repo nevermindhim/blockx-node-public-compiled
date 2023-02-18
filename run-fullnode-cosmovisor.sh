@@ -1,4 +1,5 @@
 #!/bin/bash
+
 CHAINID="blockx_12345-2"
 MONIKER="Blockx-Node-2"
 KEYRING="file"
